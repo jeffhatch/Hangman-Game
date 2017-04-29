@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman with Animated Movie Titles</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+	body {
+		background: url(assets/images/disney_collage.jpg) top center no-repeat #000;
+		}
+	#row0 {
+		margin-top:15px;
+		}		
+	#titletext span {
+		color: #fff;
+		background-color: rgba(0,0,0,0.8);
+		padding:15px;
+		border-radius: 25px;
+		}
+	#row1 {
+		margin-top:10px;
+		}			
+	#row1 span {
+		color: red;
+		background-color: rgba(0,0,0,0.8);
+		padding:12px;
+		border-radius: 12px;
+		}
+	#row2 {
+		margin-top:15px;
+		}
+	.word-focus {
+		border: 1px solid #000;
+		width: 400px;
+		margin: auto;
+		border-radius: 12px;
+		background-color: #f5f5f5;
+		}
+	#row4 h4 {
+		color: red;
+		}
+	.guessed-focus {
+		border: 1px solid #000;
+		width: 400px;
+		margin: auto;
+		border-radius: 12px;
+		background-color: #f5f5f5;
+		}		
+  </style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row" id="row0">
+			<div class="col-md-12 text-center">
+				<h1 id="titletext"><span>Hangman with Animated Movie Titles</span></h1>
+			</div>			
+		</div>
+	</div>
+	<div class="container" id="maincontent">
+		<div class="row">
+			<div class="row" id="row1">
+				<div class="col-md-12 text-center">
+					<h2><span>Press Any Key To Get Started!</span></h2>
+				</div>
+			</div>
+			<div class="row" id="row2">
+				<div class="col-md-12 text-center">
+					<h4><span id="wins"></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="losses"></span></h4>
+				</div>
+			</div>
+			<div class="row" id="row3">
+				<div class="col-md-12 text-center">
+					<div class="word-focus">
+						<h4>Current Word</h4>
+						<h4 id="field"></h4>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="row4">
+				<div class="col-md-12 text-center">
+					<h4>Number of Guesses Remaining: <span id="numguesses">12</span></h4>
+				</div>
+			</div>
+			<div class="row" id="row5">
+				<div class="col-md-12 text-center">
+					<div class="guessed-focus">
+						<h4>Letters Already Guessed</h4>
+						<h4>[ <span id="letters"></span> ]</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="row6">
+				<div class="col-md-12 text-center">
+					<h4 id="winword"></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="assets/js/hangman.js" type="text/javascript"></script>
+</body>
+</html>
